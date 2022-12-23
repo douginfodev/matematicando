@@ -4,9 +4,11 @@ h1{text-align: center; border: 1px solid white;}
 
 body{ font-size: 1.6rem; background-color: white};
 
-.wrapper{display: flex; width:100%; height: auto; margin:0 auto; border: 1px solid white;}
+main{display:flex; width:60%; height:auto; margin:0 auto; border: 1px solid white; background-image: url('fblue.png');}
 
-.wrapper-column{display: flex; flex-direction:column; float: left; justify-items: center; width:33%; height: auto; margin:0 auto; border: 1px solid white; }
+.wrapper{width:100%; height: auto; margin:0 auto; border: 1px solid white; background-image: url('img/fblue.png');}
+
+.wrapper-column{display: flex;justify-content: center; width:10%; height: auto; border: 1px solid white; }
 
 #list-left,
 #list-center,
