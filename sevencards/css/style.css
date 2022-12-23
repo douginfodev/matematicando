@@ -1,3 +1,23 @@
 *{margin:0; padding: 0; box-sizing: border-box;}
 
 h1{text-align: center; border: 1px solid white;}
+
+body{ font-size: 1.6rem; background-color: white};
+
+.wrapper{display: flex; width:100%; height: auto; margin:0 auto; border: 1px solid white;}
+
+.wrapper-column{display: flex; flex-direction:column; float: left; justify-items: center; width:33%; height: auto; margin:0 auto; border: 1px solid white; }
+
+#list-left,
+#list-center,
+#list-right{
+  display: flex;
+  width:5.0rem;
+  height: 7.0rem;
+  padding:1.0rem;
+  border: 2px solid white;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
