@@ -21,7 +21,7 @@ main {
   height: 500px;
   margin: 0 auto;
   justify-content: space-between;
-  background-image: url(",,/imagem/fblue.png");
+  background-image: url("../imagem/fblue.png");
 }
 
 
@@ -32,7 +32,7 @@ main {
   margin: 0 auto;
   justify-content: space-between;
   border: 2px solid white;
-   background-image: url(",,/imagem/fgreen.png");
+   background-image: url("../imagem/fblue.png");
 
 }
 
@@ -45,9 +45,9 @@ main {
   border: 1px solid white;
 }
 
-#list-left,
-#list-center,
-#list-right {
+.listleft,
+.center,
+.list-right {
   display: flex;
   width: 5.0rem;
   height: 7.0rem;
