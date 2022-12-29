@@ -18,51 +18,28 @@ var CardListCenter = [];
 var listLeft   = document.getElementsByClassName("listleft");
 var listCenter = document.getElementsByClassName("center");
 var listRight  = document.getElementsByClassName("list-right");
-var L = 0;
-var C = 1;
-var R = 2;
-var indexL = 0;
-var indexC = 0;
-var indexR = 0;
+
 
 //RANDOMIZE ARRAY
-let cardsRandomized = cardsArray
-    .map(value => ({ value, sort: Math.random() }))
-    .sort((a, b) => a.sort - b.sort)
-    .map(({ value }) => value)
+let cardsRandomized = randomize(cardsArray);
 
-for (i = 0; i < 21; i++) {
 
-    if (L === i) {
-        CardListLeft[indexL] = cardsRandomized[i];
-        L += 3;
-        console.log(i+' -' +CardListLeft[indexL]);
-        indexL += 1;
-        
-    }
 
-    if (C === i) {
-        CardListCenter[indexC] = cardsRandomized[i];
-        C += 3;
-        // console.log(i+' -' +centerCardList[indexC]);
-        indexC += 1;
-    }
+CardListLeft   = distributeCards(0, cardsRandomized);
+CardListCenter = distributeCards(1, cardsRandomized);
+CardListRight  = distributeCards(2, cardsRandomized);
 
-    if (R === i) {
-        CardListRight[indexR] = cardsRandomized[i];
-        R += 3;
-        // console.log(i+' -' +rightCardList[indexR]);
-        indexR += 1;
-    }
-}
 
 // PRINT CARDS
 for (J = 0; J < 7; J++) {
-
-     listLeft[J].innerHTML = CardListLeft[J];
-     listCenter[J].innerHTML = CardListCenter[J];
-     listRight[J].innerHTML = CardListRight[J];
+    listLeft[J].innerHTML   = CardListLeft[J];
+    listCenter[J].innerHTML = CardListCenter[J];
+    listRight[J].innerHTML  = CardListRight[J];
 }
+
+amountCards(CardListLeft, 0, cardsRandomized);
+amountCards(CardListCenter, 1, cardsRandomized);
+amountCards(CardListRight, 2, cardsRandomized);
 
 
 
