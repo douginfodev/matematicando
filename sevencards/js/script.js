@@ -22,8 +22,13 @@ var listRight  = document.getElementsByClassName("list-right");
 
 //RANDOMIZE ARRAY
 let cardsRandomized = randomize(cardsArray);
+var Loop = 0;
+recurssividade();
 
-
+function recurssividade(){
+var posLeft   = 0;
+var posCenter = 0;
+var posRight  = 0;
 
 CardListLeft   = distributeCards(0, cardsRandomized);
 CardListCenter = distributeCards(1, cardsRandomized);
@@ -35,13 +40,39 @@ for (J = 0; J < 7; J++) {
     listLeft[J].innerHTML   = CardListLeft[J];
     listCenter[J].innerHTML = CardListCenter[J];
     listRight[J].innerHTML  = CardListRight[J];
+
+    if (CardListLeft[J] === '10'){
+      listLeft[J].style.backgroundImage = "url('imagem/fbutton.png')";
+      posLeft   = 1;
+      posCenter = 0;
+      posRight  = 2;
+    }
+
+    if (CardListCenter[J] === '10'){
+      listCenter[J].style.backgroundImage = "url('imagem/fbutton.png')";
+      posLeft   = 0;
+      posCenter = 1;
+      posRight  = 2;
+    }
+
+    if (CardListRight[J] === '10'){
+      listRight[J].style.backgroundImage = "url('imagem/fbutton.png')";
+      posLeft   = 0;
+      posCenter = 2;
+      posRight  = 1;
+    }
 }
 
-amountCards(CardListLeft, 0, cardsRandomized);
-amountCards(CardListCenter, 1, cardsRandomized);
-amountCards(CardListRight, 2, cardsRandomized);
+amountCards(CardListLeft, posLeft, cardsRandomized);
+amountCards(CardListCenter, posCenter, cardsRandomized);
+amountCards(CardListRight, posRight, cardsRandomized);
 
+Loop += 1;
 
+if (Loop < 3)
+  recurssividade();
+console.log(Loop);
+}
 
 
 
