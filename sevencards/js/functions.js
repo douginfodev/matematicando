@@ -16,7 +16,7 @@ function amountCards(vet, indice, cardsVet) {
 
   for (i = 0; i < 7; i++) {
     cardsVet[ind] = vet[i];
-    console.log(cardsVet[ind]);
+    // console.log(cardsVet[ind]);
     ind += 1;
   }
 }

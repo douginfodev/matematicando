@@ -9,7 +9,7 @@ let cardsArray = ['1', '2', '3',
     '16', '17', '18',
     '19', '20', '21'];
 
-// KEFT
+// LEFT
 var CardListLeft   = [];
 var CardListRight  = [];
 var CardListCenter = [];
@@ -21,6 +21,7 @@ var listRight  = document.getElementsByClassName("list-right");
 
 
 //RANDOMIZE ARRAY
+for(k = 0; k < 10; k++){
 let cardsRandomized = randomize(cardsArray);
 var Loop = 0;
 recurssividade();
@@ -46,6 +47,7 @@ for (J = 0; J < 7; J++) {
       posLeft   = 1;
       posCenter = 0;
       posRight  = 2;
+      console.log('POS = L '+(J+1));
     }
 
     if (CardListCenter[J] === '10'){
@@ -53,6 +55,7 @@ for (J = 0; J < 7; J++) {
       posLeft   = 0;
       posCenter = 1;
       posRight  = 2;
+      console.log('POS C = '+(J+1));
     }
 
     if (CardListRight[J] === '10'){
@@ -60,6 +63,7 @@ for (J = 0; J < 7; J++) {
       posLeft   = 0;
       posCenter = 2;
       posRight  = 1;
+      console.log('POS R = '+(J+1));
     }
 }
 
@@ -71,10 +75,10 @@ Loop += 1;
 
 if (Loop < 3)
   recurssividade();
-console.log(Loop);
+// console.log(Loop);
 }
 
-
-
+console.log('CARTA FINAL = '+cardsRandomized[10]);
+}
 
 //document.getElementById("demo").innerHTML = "Hello World!";
