@@ -17,7 +17,7 @@ body {
 
 main {
   display: flex;
-  width: 60%;
+  width: 80%;
   height: 500px;
   margin: 0 auto;
   justify-content: space-between;
@@ -43,6 +43,14 @@ main {
   width: 33%;
   height: inherit;
   border: 1px solid white;
+}
+
+.wrapper-column-log {
+  display: flex;
+  width: 80%;
+  height: inherit;
+  border: 1px solid white;
+  background-image: url('../imagem/froxo.png');
 }
 
 .listleft,
